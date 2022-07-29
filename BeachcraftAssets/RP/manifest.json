@@ -1,0 +1,44 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Beachcraft RP",
+    "description": "Official Beachcraft RP",
+    "uuid": "a7ffb763-3759-beff-5fc2-c0dad43298f6",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      17,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "40003dde-db69-3d69-20ba-cb9552d2ef30",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "320762a1-b8b4-9d54-063f-a38ed124d3ad",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Matwarey"
+    ]
+  }
+}

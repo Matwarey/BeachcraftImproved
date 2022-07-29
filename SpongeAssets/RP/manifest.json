@@ -1,0 +1,44 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Spongebob Assets RP",
+    "description": "Spongebob Assets RP Copyright 1999-2022",
+    "uuid": "3ebbce93-7376-681f-39ec-03cfcc33c2b7",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      17,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "99655338-2dfe-5808-1eb3-529a00f0d0f3",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "e569957a-a1db-c7f4-77b5-8b0ab4184dac",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Spark Universe"
+    ]
+  }
+}
