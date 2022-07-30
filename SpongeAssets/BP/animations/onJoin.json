@@ -1,0 +1,17 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.onJoin": {
+			"timeline": {
+				"9.0": [
+					"/scoreboard objectives add SpongeCoins dummy",
+					"/scoreboard players add @s SpongeCoins 0",
+					"/scoreboard objectives add badscore dummy",
+					"/scoreboard players add @s badscore 0"
+				]
+			},
+			"animation_length": 9.9,
+			"loop": false
+		}
+	}
+}
