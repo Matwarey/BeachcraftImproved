@@ -2,15 +2,15 @@
 say @a[tag=!wel2] Come by the krusty Krab when you can to start a quest for the Krusty Krab!
 
 # Start
-say @a[tag=m1] Hey! It's me, Spongebob.
-say @a[tag=m1] Let's just say.. the Krusty Krab is going into debt!
-say @a[tag=m1] and you'll need to help the Krusty Krab by collecting Spongecoins all over the map!
+say @a[tag=m1] §aHey! §3It's me, §eSpongebob.
+say @a[tag=m1] §2Let's just say.. §cthe Krusty Krab §4is going into debt!
+say @a[tag=m1] §eand you'll need to help §cthe Krusty Krab §eby collecting Spongecoins all over the §dmap!
 say @a[tag=m1] You'll need 10,000 Spongecoins to make the Krusty Krab rich again!
-say @a[tag=m1] The CrabSMP is going to shut the business down if you don't get 10,000 Spongecoins quick!
-say @a[tag=m1] By Aug 15th at 3:00PM EST, You can get Spongebob's Kit by completing the event!
-say @a[tag=m1] Your Items will be given to you automatic when hitting 10,000 Spongecoins.
-say @a[tag=m1] If you need help anytime, you can do '~shelp' in chat!
-say @a[tag=m1] If you need to check how much SpongeCoins you have, do '~bal' in chat!
+say @a[tag=m1] §3The §cCrabSMP §4is going to the business down if you don't get §e10,000 Spongecoins quick!
+say @a[tag=m1] §aBy Aug 15th at 3:00PM EST, §eYou can get Spongebob's Kit by completing the §aevent!
+say @a[tag=m1] §cYour Items will be given to you automatic when hitting §e10,000 Spongecoins.
+say @a[tag=m1] §aIf you need help anytime, you can do §c'~shelp' in chat!
+say @a[tag=m1] §aIf you need to check how much SpongeCoins you have, do §c'~bal' in chat!
 execute @a[tag=m1] ~ ~ ~ tag @a[tag=m1] remove m1
 
 # When they hit 10k spongecoins then
