@@ -26,14 +26,15 @@
       ]
     },
     {
-      "type": "javascript",
+	  "language": "javascript",
+      "type": "script",
       "uuid": "4a5d8f88-1764-b8e4-fcea-e9fc738193ae",
       "version": [
         1,
         0,
         0
       ],
-      "entry": "scripts/modules/index.js"
+      "entry": "scripts/modules/handler.js"
     }
   ],
   "dependencies": [
