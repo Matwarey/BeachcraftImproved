@@ -1,6 +1,6 @@
 export default
 {
-	"debug": true,
+    "debug": true,
     "customcommands": {
         "prefix": "~",
         "bal": true,
