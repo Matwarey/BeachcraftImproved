@@ -4,7 +4,7 @@
 		"animation.onTick": {
 			"timeline": {
 				"0.0": [
-					"/function main"
+					"/function index"
 				]
 			},
 			"animation_length": 0.05,
