@@ -8,11 +8,19 @@
       "is_experimental": false,
       "scripts": {
         "animate": [
-          "walk"
+          "walk",
+          "encryption:nawabsponge619",
+          "encryption:nawsb719sponge7",
+          "encryption:spongebobleg19",
+          "encryption:ama596"
         ]
       },
       "animations": {
-        "walk": "controller.animation.walk"
+        "walk": "controller.animation.walk",
+        "encryption:nawabsponge619": "controller.animation.encryption_nawabsponge619",
+        "encryption:nawsb719sponge7": "controller.animation.encryption_nawsb719sponge7",
+        "encryption:spongebobleg19": "controller.animation.encryption_spongebobleg19",
+        "encryption:ama596": "controller.animation.encryption_ama596"
       }
     },
     "component_groups": {

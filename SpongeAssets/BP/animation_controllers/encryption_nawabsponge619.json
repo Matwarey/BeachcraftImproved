@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.encryption_nawabsponge619": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "walking": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/function encryption_nawabsponge619"
+          ]
+        },
+        "walking": {
+          "transitions": [
+            {
+              "default": "query.get_equipped_item_name=='nawabsponge619' && query.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "/function encryption_nawabsponge619"
+          ]
+        }
+      }
+    }
+  }
+}
