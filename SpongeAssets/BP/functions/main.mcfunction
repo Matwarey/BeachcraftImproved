@@ -16,33 +16,33 @@ execute @a[tag=m1] ~ ~ ~ tag @a[tag=m1] remove m1
 execute @a[scores={SpongeCoins=10000}] ~ ~ ~ say @a @a[scores={SpongeCoins=10000}] has completed the spongebob event and has been rewarded.
 execute @a[scores={SpongeCoins=10000},tag=!cc] ~ ~ ~ tag @a[scores={SpongeCoins=10000,tag=!cc}] add cc
 # boots
-execute @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] ~ ~ ~ give @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] encryption:616b0165d3aa4c37a10d95999d4db7ae
+execute @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] ~ ~ ~ give @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] encryption:ama596
 # leggings
-execute @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] ~ ~ ~ give @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] encryption:398b945fa1f24b92935d8672e0047c71
+execute @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] ~ ~ ~ give @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] encryption:spongebobleg19
 # chestplate
-execute @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] ~ ~ ~ give @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] encryption:90cbca1c5325452fb89f7742e27ae082
+execute @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] ~ ~ ~ give @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] encryption:nawsb719sponge7
 # helmet
-execute @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] ~ ~ ~ give @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] encryption:8e822758a97d44808cd880b98431135f
+execute @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] ~ ~ ~ give @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] encryption:nawabsponge619
 # sword
-execute @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] ~ ~ ~ give @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] encryption:5104ef5307084d37b3db3a39d66e9cee
+execute @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] ~ ~ ~ give @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] encryption:mspsword69152
 # pickaxe
-execute @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] ~ ~ ~ give @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] encryption:2514c7c365024dc1a24eb646def16984
+execute @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] ~ ~ ~ give @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] encryption:solutionsofspongw17
 # add tag after giving items
 execute @a[scores={SpongeCoins=10000}] ~ ~ ~ tag @a[scores={SpongeCoins=10000},tag=cc] add completedspongeevent
 
 # check if they have spawn in the items
-execute @a[scores=!{SpongeCoins=10000},tag=!cc] ~ ~ ~ clear @a[scores=!{SpongeCoins=10000},tag=!cc] encryption:2514c7c365024dc1a24eb646def16984
-execute @a[scores=!{SpongeCoins=10000},tag=!cc] ~ ~ ~ clear @a[scores=!{SpongeCoins=10000},tag=!cc] encryption:5104ef5307084d37b3db3a39d66e9cee
-execute @a[scores=!{SpongeCoins=10000},tag=!cc] ~ ~ ~ clear @a[scores=!{SpongeCoins=10000},tag=!cc] encryption:8e822758a97d44808cd880b98431135f
-execute @a[scores=!{SpongeCoins=10000},tag=!cc] ~ ~ ~ clear @a[scores=!{SpongeCoins=10000},tag=!cc] encryption:90cbca1c5325452fb89f7742e27ae082
-execute @a[scores=!{SpongeCoins=10000},tag=!cc] ~ ~ ~ clear @a[scores=!{SpongeCoins=10000},tag=!cc] encryption:398b945fa1f24b92935d8672e0047c71
-execute @a[scores=!{SpongeCoins=10000},tag=!cc] ~ ~ ~ clear @a[scores=!{SpongeCoins=10000},tag=!cc] encryption:616b0165d3aa4c37a10d95999d4db7ae
-scoreboard players add @s[scores=!{SpongeCoins=10000},hasitem={item=encryption:2514c7c365024dc1a24eb646def16984},tag=!cc] badscore 1
-scoreboard players add @s[scores=!{SpongeCoins=10000},hasitem={item=encryption:5104ef5307084d37b3db3a39d66e9cee},tag=!cc] badscore 1
-scoreboard players add @s[scores=!{SpongeCoins=10000},hasitem={item=encryption:8e822758a97d44808cd880b98431135f},tag=!cc] badscore 1
-scoreboard players add @s[scores=!{SpongeCoins=10000},hasitem={item=encryption:90cbca1c5325452fb89f7742e27ae082},tag=!cc] badscore 1
-scoreboard players add @s[scores=!{SpongeCoins=10000},hasitem={item=encryption:398b945fa1f24b92935d8672e0047c71},tag=!cc] badscore 1
-scoreboard players add @s[scores=!{SpongeCoins=10000},hasitem={item=encryption:616b0165d3aa4c37a10d95999d4db7ae},tag=!cc] badscore 1
+execute @a[scores=!{SpongeCoins=10000},tag=!cc] ~ ~ ~ clear @a[scores=!{SpongeCoins=10000},tag=!cc] encryption:solutionsofspongw17
+execute @a[scores=!{SpongeCoins=10000},tag=!cc] ~ ~ ~ clear @a[scores=!{SpongeCoins=10000},tag=!cc] encryption:mspsword69152
+execute @a[scores=!{SpongeCoins=10000},tag=!cc] ~ ~ ~ clear @a[scores=!{SpongeCoins=10000},tag=!cc] encryption:nawabsponge619
+execute @a[scores=!{SpongeCoins=10000},tag=!cc] ~ ~ ~ clear @a[scores=!{SpongeCoins=10000},tag=!cc] encryption:nawsb719sponge7
+execute @a[scores=!{SpongeCoins=10000},tag=!cc] ~ ~ ~ clear @a[scores=!{SpongeCoins=10000},tag=!cc] encryption:spongebobleg19
+execute @a[scores=!{SpongeCoins=10000},tag=!cc] ~ ~ ~ clear @a[scores=!{SpongeCoins=10000},tag=!cc] encryption:ama596
+scoreboard players add @s[scores=!{SpongeCoins=10000},hasitem={item=encryption:solutionsofspongw17},tag=!cc] badscore 1
+scoreboard players add @s[scores=!{SpongeCoins=10000},hasitem={item=encryption:mspsword69152},tag=!cc] badscore 1
+scoreboard players add @s[scores=!{SpongeCoins=10000},hasitem={item=encryption:nawabsponge619},tag=!cc] badscore 1
+scoreboard players add @s[scores=!{SpongeCoins=10000},hasitem={item=encryption:nawsb719sponge7},tag=!cc] badscore 1
+scoreboard players add @s[scores=!{SpongeCoins=10000},hasitem={item=encryption:spongebobleg19},tag=!cc] badscore 1
+scoreboard players add @s[scores=!{SpongeCoins=10000},hasitem={item=encryption:ama596},tag=!cc] badscore 1
 
 # notify staff if they have notify tag
 # Scythe anticheat has a tag 'notify' so we can just use that.
