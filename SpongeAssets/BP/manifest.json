@@ -34,7 +34,7 @@
         0,
         0
       ],
-      "entry": "scripts/modules/index.js"
+      "entry": "scripts/index.js"
     }
   ],
   "dependencies": [
