@@ -3,7 +3,7 @@
   "header": {
     "name": "Spongebob Assets BP",
     "description": "Spongebob Assets BP Copyright 1999-2022",
-    "uuid": "e569957a-a1db-c7f4-77b5-8b0ab4184dac",
+    "uuid": "eedf120f-5853-4d71-8a51-b6f856b66f3c",
     "version": [
       1,
       0,
@@ -34,7 +34,7 @@
         0,
         0
       ],
-      "entry": "scripts/modules/handler.js"
+      "entry": "scripts/modules/index.js"
     }
   ],
   "dependencies": [
