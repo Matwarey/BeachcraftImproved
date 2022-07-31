@@ -75,6 +75,8 @@ World.events.tick.subscribe(() => {
                 flag(player, "BadPackets", "1", "Exploit", "x_rotation", `${(player.rotation.x.toFixed(3))},y_rotation=${(player.rotation.y.toFixed(3))}`, true);
         }
 
+        if(config.modules.badpackets5.enabled && player.velocity.y.toFixed(6) == 0.4200 && player.velocity.x == 0) flag(player, "BadPackets", "5", "Exploit", "yVelocity", player.velocity.y.toFixed(6), true);
+		
         // sexy looking ban message
         if(player.hasTag("isBanned")) banMessage(player);
 

@@ -254,6 +254,11 @@ export default
             "maxYaw": 180,
             "punishment": "ban",
             "minVLbeforeBan": 0
+		},
+		"badpackets5": {
+            "enabled": true,
+            "punishment": "none",
+            "minVLbeforeBan": 0
         }
     },
     "itemLists": {

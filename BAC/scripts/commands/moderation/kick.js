@@ -18,7 +18,7 @@ export function kick(message, args) {
         else isSilent = false;
 
     let player = message.sender;
-    let reason = args.slice(1).join(" ").replace("-s", "") || "No reason specified";
+    let reason = args.slice(1).join(" ").replace("-s", "").replace(/"|\\/g, "") || "No reason specified";
 
     // make sure the user has permissions to run the command
     if(!player.hasTag("op")) 
