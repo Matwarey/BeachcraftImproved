@@ -11,6 +11,7 @@ say @a[tag=m1] §aBy Aug 15th at 3:00PM EST, §eYou can get Spongebob's Kit by c
 say @a[tag=m1] §cYour Items will be given to you automatic when hitting §e10,000 Spongecoins.
 say @a[tag=m1] §aIf you need help anytime, you can do §c'~shelp' in chat!
 say @a[tag=m1] §aIf you need to check how much SpongeCoins you have, do §c'~bal' in chat!
+execute @a[tag=m1] ~ ~ ~ tag @a[tag=m1] add cm1
 execute @a[tag=m1] ~ ~ ~ tag @a[tag=m1] remove m1
 
 # When they hit 10k spongecoins then
