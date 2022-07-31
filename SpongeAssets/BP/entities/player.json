@@ -8,8 +8,6 @@
       "is_experimental": false,
       "scripts": {
         "animate": [
-		  "onTick",
-		  "onJoin",
           "encryption:nawabsponge619",
           "encryption:ama596",
           "encryption:spongebobleg19",

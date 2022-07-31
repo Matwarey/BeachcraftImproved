@@ -39,15 +39,15 @@ execute @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] ~ ~ ~ clear @a[scores={
 execute @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] encryption:nawsb719sponge7
 execute @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] encryption:spongebobleg19
 execute @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] encryption:ama596
-scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:solutionsofspongw17},tag=!cc,tag=!cm1] badscore 1
-scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:mspsword69152},tag=!cc,tag=!cm1] badscore 1
-scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:nawabsponge619},tag=!cc,tag=!cm1] badscore 1
-scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:nawsb719sponge7},tag=!cc,tag=!cm1] badscore 1
-scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:spongebobleg19},tag=!cc,tag=!cm1] badscore 1
-scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:ama596},tag=!cc,tag=!cm1] badscore 1
+scoreboard players add @s[hasitem={item=encryption:solutionsofspongw17},tag=!cc,tag=!cm1] badscore 1
+scoreboard players add @s[hasitem={item=encryption:mspsword69152},tag=!cc,tag=!cm1] badscore 1
+scoreboard players add @s[hasitem={item=encryption:nawabsponge619},tag=!cc,tag=!cm1] badscore 1
+scoreboard players add @s[hasitem={item=encryption:nawsb719sponge7},tag=!cc,tag=!cm1] badscore 1
+scoreboard players add @s[hasitem={item=encryption:spongebobleg19},tag=!cc,tag=!cm1] badscore 1
+scoreboard players add @s[hasitem={item=encryption:ama596},tag=!cc,tag=!cm1] badscore 1
 
 # notify staff if they have notify tag
-tellraw @a[tag=notify] {"rawtext":[{"text":"§r§6[§aScythe§6]§r "},{"selector":"@s"},{"text":" §1has low score of §7(SpongeCoins) to get Spongebob's Armor §4LowScore/A §4(VL= "},{"score":{"name":"@s","objective":"badscore"}}]}
+tellraw @a[tag=notify] {"rawtext":[{"text":"§r§6[§aScythe§6]§r "},{"selector":"@s"},{"text":" §1has low score of §7(SpongeCoins) §1to get Spongebob's Armor §4LowScore/A §4VL= "},{"score":{"name":"@s","objective":"badscore"}}]}
 
 # if they have 10k SpongeCoins and Completed Event then
 scoreboard players set @s[scores={SpongeCoins=10000},tag=cc,tag=completedspongeevent] SpongeCoins 9995
