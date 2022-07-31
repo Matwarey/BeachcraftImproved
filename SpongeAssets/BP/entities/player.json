@@ -9,16 +9,16 @@
       "scripts": {
         "animate": [
           "encryption:nawabsponge619",
-          "encryption:nawsb719sponge7",
+          "encryption:ama596",
           "encryption:spongebobleg19",
-          "encryption:ama596"
+          "encryption:nawsb719sponge7"
         ]
       },
       "animations": {
         "encryption:nawabsponge619": "controller.animation.encryption_nawabsponge619",
-        "encryption:nawsb719sponge7": "controller.animation.encryption_nawsb719sponge7",
+        "encryption:ama596": "controller.animation.encryption_ama596",
         "encryption:spongebobleg19": "controller.animation.encryption_spongebobleg19",
-        "encryption:ama596": "controller.animation.encryption_ama596"
+        "encryption:nawsb719sponge7": "controller.animation.encryption_nawsb719sponge7"
       }
     },
     "component_groups": {
@@ -105,7 +105,7 @@
           "add_effects": []
         }
       },
-      "encryption:nawsb719sponge7_event_play": {
+      "encryption:ama596_event_play": {
         "minecraft:health": {
           "value": 22,
           "max": 22
@@ -129,7 +129,7 @@
           "add_effects": []
         }
       },
-      "encryption:ama596_event_play": {
+      "encryption:nawsb719sponge7_event_play": {
         "minecraft:health": {
           "value": 22,
           "max": 22
@@ -242,11 +242,11 @@
                   "test": "has_equipment",
                   "subject": "self",
                   "domain": "hand",
-                  "value": "encryption:nawsb719sponge7"
+                  "value": "encryption:ama596"
                 }
               ]
             },
-            "event": "encryption:nawsb719sponge7_event_hold"
+            "event": "encryption:ama596_event_hold"
           }
         },
         {
@@ -257,11 +257,11 @@
                   "test": "has_equipment",
                   "subject": "self",
                   "domain": "head",
-                  "value": "encryption:nawsb719sponge7"
+                  "value": "encryption:ama596"
                 }
               ]
             },
-            "event": "encryption:nawsb719sponge7_event_play"
+            "event": "encryption:ama596_event_play"
           }
         },
         {
@@ -302,11 +302,11 @@
                   "test": "has_equipment",
                   "subject": "self",
                   "domain": "hand",
-                  "value": "encryption:ama596"
+                  "value": "encryption:nawsb719sponge7"
                 }
               ]
             },
-            "event": "encryption:ama596_event_hold"
+            "event": "encryption:nawsb719sponge7_event_hold"
           }
         },
         {
@@ -317,11 +317,11 @@
                   "test": "has_equipment",
                   "subject": "self",
                   "domain": "head",
-                  "value": "encryption:ama596"
+                  "value": "encryption:nawsb719sponge7"
                 }
               ]
             },
-            "event": "encryption:ama596_event_play"
+            "event": "encryption:nawsb719sponge7_event_play"
           }
         }
       ],
@@ -398,12 +398,12 @@
             "encryption:solutionsofspongw17",
             "encryption:nawabsponge619_event_hold",
             "encryption:nawabsponge619_event_play",
-            "encryption:nawsb719sponge7_event_hold",
-            "encryption:nawsb719sponge7_event_play",
+            "encryption:ama596_event_hold",
+            "encryption:ama596_event_play",
             "encryption:spongebobleg19_event_hold",
             "encryption:spongebobleg19_event_play",
-            "encryption:ama596_event_hold",
-            "encryption:ama596_event_play"
+            "encryption:nawsb719sponge7_event_hold",
+            "encryption:nawsb719sponge7_event_play"
           ]
         }
       },
@@ -467,17 +467,17 @@
           ]
         }
       },
-      "encryption:nawsb719sponge7_event_hold": {
+      "encryption:ama596_event_hold": {
         "add": {
           "component_groups": [
-            "encryption:nawsb719sponge7_event_hold"
+            "encryption:ama596_event_hold"
           ]
         }
       },
-      "encryption:nawsb719sponge7_event_play": {
+      "encryption:ama596_event_play": {
         "add": {
           "component_groups": [
-            "encryption:nawsb719sponge7_event_play"
+            "encryption:ama596_event_play"
           ]
         }
       },
@@ -495,17 +495,17 @@
           ]
         }
       },
-      "encryption:ama596_event_hold": {
+      "encryption:nawsb719sponge7_event_hold": {
         "add": {
           "component_groups": [
-            "encryption:ama596_event_hold"
+            "encryption:nawsb719sponge7_event_hold"
           ]
         }
       },
-      "encryption:ama596_event_play": {
+      "encryption:nawsb719sponge7_event_play": {
         "add": {
           "component_groups": [
-            "encryption:ama596_event_play"
+            "encryption:nawsb719sponge7_event_play"
           ]
         }
       }

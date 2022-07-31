@@ -46,9 +46,12 @@ scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:s
 scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:ama596},tag=!cc] badscore 1
 
 # notify staff if they have notify tag
-# Scythe anticheat has a tag 'notify' so we can just use that.
 tellraw @a[tag=notify] {"rawtext":[{"text":"§r§6[§aScythe§6]§r "},{"selector":"@s"},{"text":" §1has low score of §7(SpongeCoins) to get Spongebob's Armor §4LowScore/A §4(VL= "},{"score":{"name":"@s","objective":"badscore"}}]}
 
 # if they have 10k SpongeCoins and Completed Event then
 scoreboard players set @s[scores={SpongeCoins=10000},tag=cc,tag=completedspongeevent] SpongeCoins 9995
 scoreboard players set @s[tag=cc,tag=completedspongeevent] badscore 0
+
+# check if they have a spongecoin, then give it in scoreboard format then clear
+execute @a[hasitem={item=nonlinear:spongecoinsasset}] scoreboard players add @a[hasitem={item=nonlinear:spongecoinsasset}] SpongeCoins 1
+execute @a[hasitem={item=nonlinear:spongecoinsasset}] clear @a[hasitem={item=nonlinear:spongecoinsasset}] nonlinear:spongecoinsasset 0 1
