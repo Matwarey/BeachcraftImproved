@@ -8,6 +8,8 @@
       "is_experimental": false,
       "scripts": {
         "animate": [
+		  "onTick",
+		  "onJoin",
           "encryption:nawabsponge619",
           "encryption:ama596",
           "encryption:spongebobleg19",
@@ -15,6 +17,8 @@
         ]
       },
       "animations": {
+		"onTick": "animation.onTick",
+		"onJoin": "animation.onJoin",
         "encryption:nawabsponge619": "controller.animation.encryption_nawabsponge619",
         "encryption:ama596": "controller.animation.encryption_ama596",
         "encryption:spongebobleg19": "controller.animation.encryption_spongebobleg19",
