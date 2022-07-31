@@ -1,7 +1,5 @@
 import config from "./data/config.js";
 
-const World = Minecraft.world;
-
 // import all our commands
 import { bal } from "./commands/bal.js";
 import { shelp } from "./commands/shelp.js";
