@@ -54,5 +54,5 @@ scoreboard players set @s[scores={SpongeCoins=10000},tag=cc,tag=completedspongee
 scoreboard players set @s[tag=cc,tag=completedspongeevent] badscore 0
 
 # check if they have a spongecoin, then give it in scoreboard format then clear
-execute @a[hasitem={item=nonlinear:spongecoinsasset}] scoreboard players add @a[hasitem={item=nonlinear:spongecoinsasset}] SpongeCoins 1
-execute @a[hasitem={item=nonlinear:spongecoinsasset}] clear @a[hasitem={item=nonlinear:spongecoinsasset}] nonlinear:spongecoinsasset 0 1
+execute @a[hasitem={item=nonlinear:spongecoinsasset}] ~ ~ ~ scoreboard players add @a[hasitem={item=nonlinear:spongecoinsasset}] SpongeCoins 1
+execute @a[hasitem={item=nonlinear:spongecoinsasset}] ~ ~ ~ clear @a[hasitem={item=nonlinear:spongecoinsasset}] nonlinear:spongecoinsasset 0 1
