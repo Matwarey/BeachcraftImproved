@@ -75,12 +75,21 @@ World.events.tick.subscribe(() => {
                 flag(player, "BadPackets", "1", "Exploit", "x_rotation", `${(player.rotation.x.toFixed(3))},y_rotation=${(player.rotation.y.toFixed(3))}`, true);
         }
 
-        if(config.modules.badpackets5.enabled && player.velocity.y.toFixed(6) == 0.4200) flag(player, "BadPackets", "5", "Exploit", "yVelocity", player.velocity.y.toFixed(6), true);
+        // BadPackets[5] = checks for horion freecam
+        if(!player.badpackets5Ticks) player.badpackets5Ticks = 0;
+        if(config.modules.badpackets5.enabled && player.velocity.y.toFixed(6) == 0.4200) {
+            player.badpackets5Ticks++;
+            if(player.badpackets5Ticks > 2) flag(player, "BadPackets", "5", "Exploit", "yVelocity", player.velocity.y.toFixed(6), true);
+        } else if(player.badpackets5Ticks  != 0) player.badpackets5Ticks--;
 
         if(!player.isLoaded && player.velocity.y.toFixed(6) == -0.078400) player.isLoaded = true;
 
-        if(config.modules.badpackets6.enabled && player.isLoaded && player.velocity.x == 0 && player.velocity.y == 0 && player.velocity.z == 0)
-            flag(player, "BadPackets", "6", "Exploit", false, false, true)
+        // BadPackets[6] = checks if the player does not update velocity
+        if(!player.badpackets6Ticks) player.badpackets6Ticks = 0;
+        if(config.modules.badpackets6.enabled && player.isLoaded && player.velocity.x == 0 && player.velocity.y == 0 && player.velocity.z == 0) {
+            player.badpackets6Ticks++;
+            if(player.badpackets6Ticks > 2) flag(player, "BadPackets", "6", "Exploit", false, false, true);
+        } else if(player.badpackets6Ticks  != 0) player.badpackets6Ticks--;
 		
         // sexy looking ban message
         if(player.hasTag("isBanned")) banMessage(player);
