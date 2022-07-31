@@ -33,18 +33,18 @@ execute @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] ~ ~ ~ gi
 execute @a[scores={SpongeCoins=10000}] ~ ~ ~ tag @a[scores={SpongeCoins=10000},tag=cc] add completedspongeevent
 
 # check if they have spawn in the items
-execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc] encryption:solutionsofspongw17
-execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc] encryption:mspsword69152
-execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc] encryption:nawabsponge619
-execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc] encryption:nawsb719sponge7
-execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc] encryption:spongebobleg19
-execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc] encryption:ama596
-scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:solutionsofspongw17},tag=!cc] badscore 1
-scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:mspsword69152},tag=!cc] badscore 1
-scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:nawabsponge619},tag=!cc] badscore 1
-scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:nawsb719sponge7},tag=!cc] badscore 1
-scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:spongebobleg19},tag=!cc] badscore 1
-scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:ama596},tag=!cc] badscore 1
+execute @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] encryption:solutionsofspongw17
+execute @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] encryption:mspsword69152
+execute @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] encryption:nawabsponge619
+execute @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] encryption:nawsb719sponge7
+execute @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] encryption:spongebobleg19
+execute @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] encryption:ama596
+scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:solutionsofspongw17},tag=!cc,tag=!cm1] badscore 1
+scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:mspsword69152},tag=!cc,tag=!cm1] badscore 1
+scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:nawabsponge619},tag=!cc,tag=!cm1] badscore 1
+scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:nawsb719sponge7},tag=!cc,tag=!cm1] badscore 1
+scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:spongebobleg19},tag=!cc,tag=!cm1] badscore 1
+scoreboard players add @s[scores={SpongeCoins=!10000},hasitem={item=encryption:ama596},tag=!cc,tag=!cm1] badscore 1
 
 # notify staff if they have notify tag
 tellraw @a[tag=notify] {"rawtext":[{"text":"§r§6[§aScythe§6]§r "},{"selector":"@s"},{"text":" §1has low score of §7(SpongeCoins) to get Spongebob's Armor §4LowScore/A §4(VL= "},{"score":{"name":"@s","objective":"badscore"}}]}
