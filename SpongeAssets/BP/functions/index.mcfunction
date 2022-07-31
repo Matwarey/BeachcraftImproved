@@ -1,5 +1,5 @@
 # when joining, say command will say some important news about the Krusty Krab!
-say @a[tag=!wel2] Come by the krusty Krab when you can to start a quest for the Krusty Krab!
+tellraw @s[tag=!wel2] {"rawtext":[{"text":"Come by the krusty Krab when you can to start a quest for the Krusty Krab!"}]}
 
 # Start
 tellraw @s[tag=m1] {"rawtext":[{"text":"§aHey! §3It's me, §eSpongebob."}]}
