@@ -2,20 +2,20 @@
 say @a[tag=!wel2] Come by the krusty Krab when you can to start a quest for the Krusty Krab!
 
 # Start
-say @a[tag=m1] §aHey! §3It's me, §eSpongebob.
-say @a[tag=m1] §2Let's just say.. §cthe Krusty Krab §4is going into debt!
-say @a[tag=m1] §eand you'll need to help §cthe Krusty Krab §eby collecting Spongecoins all over the §dmap!
-say @a[tag=m1] You'll need 10,000 Spongecoins to make the Krusty Krab rich again!
-say @a[tag=m1] §3The §cCrabSMP §4is going to the business down if you don't get §e10,000 Spongecoins quick!
-say @a[tag=m1] §aBy Aug 15th at 3:00PM EST, §eYou can get Spongebob's Kit by completing the §aevent!
-say @a[tag=m1] §cYour Items will be given to you automatic when hitting §e10,000 Spongecoins.
-say @a[tag=m1] §aIf you need help anytime, you can do §c'~shelp' in chat!
-say @a[tag=m1] §aIf you need to check how much SpongeCoins you have, do §c'~bal' in chat!
+tellraw @s[tag=m1] {"rawtext":[{"text":"§aHey! §3It's me, §eSpongebob."}]}
+tellraw @s[tag=m1] {"rawtext":[{"text":"§2Let's just say.. §cthe Krusty Krab §4is going into debt!"}]}
+tellraw @s[tag=m1] {"rawtext":[{"text":"§eand you'll need to help §cthe Krusty Krab §eby collecting Spongecoins all over §dspawn!"}]}
+tellraw @s[tag=m1] {"rawtext":[{"text":"You'll need 10,000 Spongecoins to make the Krusty Krab rich again!"}]}
+tellraw @s[tag=m1] {"rawtext":[{"text":"§3The §cCrabSMP §4is going to the business down if you don't get §e10,000 Spongecoins quick!"}]}
+tellraw @s[tag=m1] {"rawtext":[{"text":"§aBy Aug 15th at 3:00PM EST, §eYou can get Spongebob's Kit by completing the §aevent!"}]}
+tellraw @s[tag=m1] {"rawtext":[{"text":"§cYour Items will be given to you automatic when hitting §e10,000 Spongecoins."}]}
+tellraw @s[tag=m1] {"rawtext":[{"text":"§aIf you need help anytime, you can do §c'~shelp' in chat!"}]}
+tellraw @s[tag=m1] {"rawtext":[{"text":"§aIf you need to check how much SpongeCoins you have, do §c'~bal' in chat!"}]}
 execute @a[tag=m1] ~ ~ ~ tag @a[tag=m1] add cm1
 execute @a[tag=m1] ~ ~ ~ tag @a[tag=m1] remove m1
 
 # When they hit 10k spongecoins then
-execute @a[scores={SpongeCoins=10000}] ~ ~ ~ say @a @a[scores={SpongeCoins=10000}] has completed the spongebob event and has been rewarded.
+execute @a[scores={SpongeCoins=10000}] ~ ~ ~ say @a[scores={SpongeCoins=10000}] has completed the spongebob event and has been rewarded.
 execute @a[scores={SpongeCoins=10000},tag=!cc] ~ ~ ~ tag @a[scores={SpongeCoins=10000},tag=!cc] add cc
 # boots
 execute @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] ~ ~ ~ give @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] encryption:ama596
