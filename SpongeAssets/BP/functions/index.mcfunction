@@ -33,18 +33,12 @@ execute @a[scores={SpongeCoins=10000},tag=!completedspongeevent,tag=cc] ~ ~ ~ gi
 execute @a[scores={SpongeCoins=10000}] ~ ~ ~ tag @a[scores={SpongeCoins=10000},tag=cc] add completedspongeevent
 
 # check if they have spawn in the items
-execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] encryption:solutionsofspongw17
-execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] encryption:mspsword69152
-execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] encryption:nawabsponge619
-execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] encryption:nawsb719sponge7
-execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] encryption:spongebobleg19
-execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc,tag=!cm1] encryption:ama596
-scoreboard players add @a[hasitem={item=encryption:solutionsofspongw17},tag=!cc,tag=!cm1] badscore 1
-scoreboard players add @a[hasitem={item=encryption:mspsword69152},tag=!cc,tag=!cm1] badscore 1
-scoreboard players add @a[hasitem={item=encryption:nawabsponge619},tag=!cc,tag=!cm1] badscore 1
-scoreboard players add @a[hasitem={item=encryption:nawsb719sponge7},tag=!cc,tag=!cm1] badscore 1
-scoreboard players add @a[hasitem={item=encryption:spongebobleg19},tag=!cc,tag=!cm1] badscore 1
-scoreboard players add @a[hasitem={item=encryption:ama596},tag=!cc,tag=!cm1] badscore 1
+execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc] encryption:solutionsofspongw17
+execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc] encryption:mspsword69152
+execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc] encryption:nawabsponge619
+execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc] encryption:nawsb719sponge7
+execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc] encryption:spongebobleg19
+execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoins=!10000},tag=!cc] encryption:ama596
 
 
 # if they have 10k SpongeCoins and Completed Event then
