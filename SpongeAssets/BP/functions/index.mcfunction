@@ -42,7 +42,7 @@ execute @a[scores={SpongeCoins=!10000},tag=!cc] ~ ~ ~ clear @a[scores={SpongeCoi
 
 
 # if they have 10k SpongeCoins and Completed Event then
-scoreboard players set @a[scores={SpongeCoins=10000},tag=cc,tag=completedspongeevent] SpongeCoins 9995
+scoreboard players set @a[scores={SpongeCoins=10000},tag=cc,tag=completedspongeevent] SpongeCoins 0
 
 # check if they have a spongecoin, then give it in scoreboard format then clear
 execute @a[hasitem={item=nonlinear:spongecoinsasset}] ~ ~ ~ scoreboard players add @a[hasitem={item=nonlinear:spongecoinsasset}] SpongeCoins 1
