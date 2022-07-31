@@ -71,30 +71,33 @@
     "colorful_gifts": {
       "textures": "textures/items/colorful_gifts"
     },
-    "encryption_nawabsponge619": {
-      "textures": [
-        "textures/items/pamobile/encryption_nawabsponge619"
-      ]
-    },
     "encryption_ama596": {
       "textures": [
         "textures/items/pamobile/encryption_ama596"
       ]
     },
-    "encryption_nawsb719sponge7": {
+    "encryption_mspsword69152": {
+      "textures": "textures/items/pamobile/encryption_mspsword69152"
+    },
+    "encryption_nawabsponge619": {
       "textures": [
-        "textures/items/pamobile/encryption_nawsb719sponge7"
+        "textures/items/pamobile/encryption_nawabsponge619"
       ]
+    },
+    "nonlinear:spongecoinsasset": {
+      "textures": "textures/items/pamobile/nonlinear_spongecoinsasset"
     },
     "encryption_solutionsofspongw17": {
       "textures": "textures/items/pamobile/encryption_solutionsofspongw17"
     },
-    "encryption_mspsword69152": {
-      "textures": "textures/items/pamobile/encryption_mspsword69152"
-    },
     "encryption_spongebobleg19": {
       "textures": [
         "textures/items/pamobile/encryption_spongebobleg19"
+      ]
+    },
+    "encryption_nawsb719sponge7": {
+      "textures": [
+        "textures/items/pamobile/encryption_nawsb719sponge7"
       ]
     }
   }

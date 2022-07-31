@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "nonlinear:spongecoinsasset",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": "nonlinear:spongecoinsasset",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}
