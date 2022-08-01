@@ -196,7 +196,10 @@ World.events.tick.subscribe(() => {
                         // badenchants/C = checks if an item has an enchantment which isnt support by the item
                         // just dont ask.
                         if(config.modules.badenchantsD.enabled) {
-                            let item2 = new Minecraft.ItemStack(Minecraft.MinecraftItemTypes[snakeToCamel(item.id)], 1, item.data);
+                            let item2 = new Minecraft.ItemStack(Minecraft.MinecraftItemTypes[snakeToCamel(item.id)], 1, item.data)
+								.catch((error) =>{
+									runCommand(`tellraw @a[tag=errorlogger] {"rawtext":[{"text":"§r§6[§aScythe§6]§r "},{"text":"There was an error while trying to run the tick event. Please forward this message to support.\n-------------------------\nItem: ${item.id}\nError: ${String(error).replace(/"|\\/g, "")}\n${error.stack}\n-------------------------"}]}`);
+								});
                             if(!item2.getComponent("enchantments").enchantments.canAddEnchantment(new Minecraft.Enchantment(Minecraft.MinecraftEnchantmentTypes[enchantment], 1))) {
                                 flag(player, "BadEnchants", "C", "Exploit", "item", `${item.id},enchant=minecraft:${enchantData.type.id},level=${enchantData.level}`, false, false, i);
                             }
