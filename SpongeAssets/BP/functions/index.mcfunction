@@ -9,8 +9,8 @@ tellraw @a[tag=m1] {"rawtext":[{"text":"You'll need 10,000 Spongecoins to make t
 tellraw @a[tag=m1] {"rawtext":[{"text":"§3The §cCrabSMP §4is going to the business down if you don't get §e10,000 Spongecoins quick!"}]}
 tellraw @a[tag=m1] {"rawtext":[{"text":"§aBy Aug 15th at 3:00PM EST, §eYou can get Spongebob's Kit by completing the §aevent!"}]}
 tellraw @a[tag=m1] {"rawtext":[{"text":"§cYour Items will be given to you automatic when hitting §e10,000 Spongecoins."}]}
-tellraw @a[tag=m1] {"rawtext":[{"text":"§aIf you need help anytime, you can do §c'~shelp' in chat!"}]}
-tellraw @a[tag=m1] {"rawtext":[{"text":"§aIf you need to check how much SpongeCoins you have, do §c'~bal' in chat!"}]}
+tellraw @a[tag=m1] {"rawtext":[{"text":"§aIf you need help anytime, you can do §c'!shelp' in chat!"}]}
+tellraw @a[tag=m1] {"rawtext":[{"text":"§aIf you need to check how much SpongeCoins you have, do §c'!bal' in chat!"}]}
 execute @a[tag=m1] ~ ~ ~ tag @a[tag=m1] add cm1
 execute @a[tag=m1] ~ ~ ~ tag @a[tag=m1] remove m1
 
