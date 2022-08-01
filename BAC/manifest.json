@@ -3,7 +3,7 @@
 	"header": {
 		"name": "Beachcraft AntiCheat DEV",
 		"description": "tho",
-		"uuid": "dd2a5500-eac3-44f3-b88b-d85f64ca6879",
+		"uuid": "b0ce301c-5bdb-4d46-8e3d-712a595db5eb",
 		"version": [2, 6, 0],
 		"min_engine_version": [1, 16, 210]
 	},
