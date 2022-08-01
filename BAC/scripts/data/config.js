@@ -32,10 +32,12 @@ export default
         "notify": true,
         "tag": true,
         "vanish": true,
-	"oldvanish": true,
+	    "oldvanish": true,
         "report": true,
         "unban": true,
-        "gui": true
+        "gui": true,
+		"shelp": true,
+		"bal": true
     },
     "modules": {
         "itemSpawnRateLimit": {
@@ -247,21 +249,13 @@ export default
             "punishment": "none",
             "minVLbeforeBan": 0
         },
-        "badpackets1": {
-            "enabled": true,
-            // Although the max pitch is 90, with Full Desktop Gameplay you can set your pitch to 94.311 repeating.
-            "maxPitch": 95,
-            "maxYaw": 180,
-            "punishment": "ban",
-            "minVLbeforeBan": 0
-		},
 		"badpackets5": {
             "enabled": true,
             "punishment": "none",
             "minVLbeforeBan": 0
 		},
 		"badpackets6": {
-            "enabled": true,
+            "enabled": false,
             "punishment": "none",
             "minVLbeforeBan": 0
         }

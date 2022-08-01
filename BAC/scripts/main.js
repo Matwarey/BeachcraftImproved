@@ -20,7 +20,7 @@ World.events.beforeChat.subscribe(msg => {
 
     if(player.hasTag("isMuted")) {
         msg.cancel = true;
-        player.runCommand(`tellraw @s {"rawtext":[{"text":"§r§6[§aScythe§6]§r "},{"text":"§a§lNOPE! §r§aYou have been muted."}]}`);
+        player.runCommandAsync(`tellraw @s {"rawtext":[{"text":"§r§6[§aScythe§6]§r "},{"text":"§a§lNOPE! §r§aYou have been muted."}]}`);
     }
 
     // BadPackets/2 = chat message length check
@@ -47,15 +47,16 @@ World.events.beforeChat.subscribe(msg => {
     // add's user custom tags to their messages if it exists or we fall back
     // also filter for non ASCII characters and remove them in messages
     if (player.name !== player.nameTag && !msg.cancel && !config.modules.filterUnicodeChat) {
-        player.runCommand(`tellraw @a {"rawtext":[{"text":"<${player.nameTag}> ${msg.message.replace(/"/g, "").replace(/\\/g, "")}"}]}`);
+        player.runCommandAsync(`tellraw @a {"rawtext":[{"text":"<${player.nameTag}> ${msg.message.replace(/"/g, "").replace(/\\/g, "")}"}]}`);
         msg.cancel = true;
     } else if ((player.name === player.nameTag || config.modules.filterUnicodeChat) && !msg.cancel) {
-        player.runCommand(`tellraw @a {"rawtext":[{"text":"<${player.nameTag}> ${msg.message.replace(/[^\x00-\xFF]/g, "").replace(/"/g, "").replace(/\\/g, "")}"}]}`);
+        player.runCommandAsync(`tellraw @a {"rawtext":[{"text":"<${player.nameTag}> ${msg.message.replace(/[^\x00-\xFF]/g, "").replace(/"/g, "").replace(/\\/g, "")}"}]}`);
         msg.cancel = true;
     }
 });
 
 World.events.tick.subscribe(() => {
+    try {
     if(config.modules.itemSpawnRateLimit.enabled) data.entitiesSpawnedInLastTick = 0;
     if(config.debug) data.currentTick++;
 
@@ -69,11 +70,11 @@ World.events.tick.subscribe(() => {
             } catch {}
         }
 
-        // BadPackets[1] = checks for invalid player head angle
-        if(config.modules.badpackets1.enabled) {
-            if(Math.abs(Math.floor(player.rotation.x)) > config.modules.badpackets1.maxPitch || Math.abs(Math.floor(player.rotation.y)) > config.modules.badpackets1.maxYaw)
-                flag(player, "BadPackets", "1", "Exploit", "x_rotation", `${(player.rotation.x.toFixed(3))},y_rotation=${(player.rotation.y.toFixed(3))}`, true);
-        }
+        // sexy looking ban message
+        if(player.hasTag("isBanned")) banMessage(player);
+
+        player.blocksBroken = 0;
+        player.entitiesHit = [];
 
         // BadPackets[5] = checks for horion freecam
         if(!player.badpackets5Ticks) player.badpackets5Ticks = 0;
@@ -84,19 +85,6 @@ World.events.tick.subscribe(() => {
 
         if(!player.isLoaded && player.velocity.y.toFixed(6) == -0.078400) player.isLoaded = true;
 
-        // BadPackets[6] = checks if the player does not update velocity
-        if(!player.badpackets6Ticks) player.badpackets6Ticks = 0;
-        if(config.modules.badpackets6.enabled && player.isLoaded && player.velocity.x == 0 && player.velocity.y == 0 && player.velocity.z == 0) {
-            player.badpackets6Ticks++;
-            if(player.badpackets6Ticks > 2) flag(player, "BadPackets", "6", "Exploit", false, false, true);
-        } else if(player.badpackets6Ticks  != 0) player.badpackets6Ticks--;
-		
-        // sexy looking ban message
-        if(player.hasTag("isBanned")) banMessage(player);
-
-        player.blocksBroken = 0;
-        player.entitiesHit = [];
-
         // Crasher/A = invalid pos check
         if (config.modules.crasherA.enabled && Math.abs(player.location.x) > 30000000 ||
             Math.abs(player.location.y) > 30000000 || Math.abs(player.location.z) > 30000000) 
@@ -104,8 +92,9 @@ World.events.tick.subscribe(() => {
 
         // anti-namespoof
         // these values are set in the playerJoin config
-        if(player.flagNamespoofA) flag(player, "Namespoof", "A", "Exploit", "nameLength", player.name.length);
-        if(player.flagNamespoofB) flag(player, "Namespoof", "B", "Exploit");
+        if(player.flagNamespoofA === true) flag(player, "Namespoof", "A", "Exploit", "nameLength", player.name.length);
+        if(player.flagNamespoofB === true) flag(player, "Namespoof", "B", "Exploit");
+        if(player.flagNamespoofC === true) flag(player, "Namespoof", "C", "Exploit", "oldName", player.oldName);
 
         // player position shit
         if(player.hasTag("moving")) {
@@ -232,8 +221,8 @@ World.events.tick.subscribe(() => {
             } catch {}
         }
         
-        if(config.modules.autoclickerA.enabled && player.cps > 0 && new Date().getTime() - player.firstAttack > config.modules.autoclickerA.checkCPSAfter) {
-            player.cps = player.cps / ((new Date().getTime() - player.firstAttack) / 1000);
+        if(config.modules.autoclickerA.enabled && player.cps > 0 && Date.now() - player.firstAttack > config.modules.autoclickerA.checkCPSAfter) {
+            player.cps = player.cps / ((Date.now() - player.firstAttack) / 1000);
             // autoclicker/A = checks for high cps
             if(player.cps > config.modules.autoclickerA.maxCPS) flag(player, "Autoclicker", "A", "Combat", "CPS", player.cps);
             
@@ -245,7 +234,7 @@ World.events.tick.subscribe(() => {
             player.lastCPS = player.cps;
             */
 
-            player.firstAttack = new Date().getTime();
+            player.firstAttack = Date.now();
             player.cps = 0;
         }
 
@@ -257,6 +246,10 @@ World.events.tick.subscribe(() => {
             player.selectedSlot = 0;
         }
     }
+
+} catch (error) {
+    World.getDimension("overworld").runCommand(`tellraw @a[tag=notify] {"rawtext":[{"text":"§r§6[§aScythe§6]§r "},{"text":"There was an error while trying to run the tick event. Please forward this message to support.\n-------------------------\nError: ${String(error).replace(/"|\\/g, "")}\n${error.stack}\n-------------------------"}]}`);
+}
 });
 
 World.events.blockPlace.subscribe(block => {
@@ -358,12 +351,19 @@ World.events.playerJoin.subscribe(playerJoin => {
 
     if(!data.loaded) {
         try {
-            World.getDimension("overworld").runCommand(`scoreboard players set scythe:config gametestapi 1`);
-            World.getDimension("overworld").runCommand(`scoreboard players operation @a gametestapi = scythe:config gametestapi`);
+            player.runCommand(`scoreboard players set scythe:config gametestapi 1`);
             data.loaded = true;
         } catch {}
     }
 
+    // remove tags
+    player.removeTag("attack");
+    player.removeTag("hasGUIopen");
+    player.removeTag("right");
+    player.removeTag("left");
+    player.removeTag("ground");
+    player.removeTag("gliding");
+    
     // fix a weird crash that happens when the player has an extremely long name
     if(player.nameTag.length > 100) player.triggerEvent("scythe:kick");
 
@@ -371,11 +371,27 @@ World.events.playerJoin.subscribe(playerJoin => {
     player.nameTag = player.nameTag.replace(/"|\\/g, "");
 
     // load custom nametag
+    let foundName;
+
     player.getTags().forEach(t => {
+        // Namespoof/C
+        // adding a double qoute makes it so commands cant remove the tag, and cant add the tag to other people
+        if(config.modules.namespoofC.enabled && t.startsWith("\"name:")) foundName = t.replace("\"name:", "");
+
+        // load custom nametag
         t = t.replace(/"|\\/g, "");
         if(t.startsWith("tag:"))
             player.nameTag = `§8[§r${t.slice(4)}§8]§r ${player.name}`;
     });
+
+    if(config.modules.namespoofC.enabled) {
+        if(!foundName) {
+            player.addTag(`"name:${player.name}`);
+        } else if(foundName !== player.name) {
+            player.flagNamespoofC = true;
+            player.oldName = foundName;
+        }
+    }
 
     // Namespoof/A = username length check.
     if (config.modules.namespoofA.enabled) {
@@ -397,15 +413,6 @@ World.events.playerJoin.subscribe(playerJoin => {
 
 World.events.entityCreate.subscribe(entityCreate => {
     let entity = entityCreate.entity;
-    
-    if(entity.id === "minecraft:player") {
-        entity.removeTag("attack");
-        entity.removeTag("hasGUIopen");
-		entity.removeTag("right");
-        entity.removeTag("left");
-        entity.removeTag("ground");
-        entity.removeTag("gliding");
-    }
 
     if(config.modules.itemSpawnRateLimit.enabled) {
         data.entitiesSpawnedInLastTick++;
@@ -486,8 +493,8 @@ World.events.entityHit.subscribe(entityHit => {
         }
     }
 
-     // autoclicker/a = check for high cps
-     if(config.modules.autoclickerA.enabled || !data.checkedModules.autoclicker) {
+    // autoclicker/a = check for high cps
+    if(config.modules.autoclickerA.enabled || !data.checkedModules.autoclicker) {
         // if anti-autoclicker is disabled in game then disable it in config.js
         if(!data.checkedModules.autoclicker) {
             try {
@@ -498,7 +505,7 @@ World.events.entityHit.subscribe(entityHit => {
             data.checkedModules.autoclicker = true;
         }
 
-        if(!player.firstAttack) player.firstAttack = new Date().getTime();
+        if(!player.firstAttack) player.firstAttack = Date.now();
         if(!player.cps) player.cps = 0;
         player.cps++;
     }

@@ -3,6 +3,8 @@ import config from "../data/config.js";
 // import all our commands
 import { kick } from "./moderation/kick.js";
 import { help } from "./other/help.js";
+import { shelp } from "./other/shelp.js";
+import { bal } from "./other/bal.js";
 import { notify } from "./moderation/notify.js";
 import { op } from "./moderation/op.js";
 import { ban } from "./moderation/ban.js";
@@ -70,7 +72,7 @@ export function commandHandler(player, message) {
         else if (config.customcommands.ban && commandName === "ban") ban(message, args);
         else if (config.customcommands.notify && commandName === "notify") notify(message);
         else if (config.customcommands.vanish && commandName === "vanish" || commandName === "v") vanish(message);
-	else if (config.customcommands.oldvanish && commandName === "oldvanish" || commandName === "ov") oldvanish(message);
+	    else if (config.customcommands.oldvanish && commandName === "oldvanish" || commandName === "ov") oldvanish(message);
         else if (config.customcommands.fly && commandName === "fly" || commandName === "birdmode") fly(message, args);
         else if (config.customcommands.mute && commandName === "mute") mute(message, args);
         else if (config.customcommands.unmute && commandName === "unmute") unmute(message, args);
@@ -91,6 +93,8 @@ export function commandHandler(player, message) {
         else if (config.customcommands.worldborder && commandName === "worldborder" || commandName === "wb") worldborder(message);
         else if (config.customcommands.xray && commandName === "xray") xray(message);
         else if (config.customcommands.help && commandName === "help") help(message);
+		else if (config.customcommands.shelp && commandName === "shelp") shelp(message);
+		else if (config.customcommands.bal && commandName === "bal") bal(message);
         else if (config.customcommands.credits && commandName === "credits") credits(message);
         else if (config.customcommands.op && commandName === "op") op(message, args);
         else if (config.customcommands.autoclicker && commandName === "autoclicker") autoclicker(message);

@@ -2,8 +2,8 @@
 	"format_version": 2,
 	"header": {
 		"name": "Beachcraft AntiCheat DEV",
-		"description": "Scythe, The best minecraft bedrock anticheat, designed for realms and servers.",
-		"uuid": "209c91cb-4b74-4031-b0eb-5235f526be71",
+		"description": "tho",
+		"uuid": "dd2a5500-eac3-44f3-b88b-d85f64ca6879",
 		"version": [2, 6, 0],
 		"min_engine_version": [1, 16, 210]
 	},

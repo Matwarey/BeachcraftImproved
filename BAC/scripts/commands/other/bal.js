@@ -12,7 +12,7 @@ export function bal(message) {
     
     // make sure the user has permissions to run the command
     if(!player.hasTag("op")) 
-        return player.runCommand(`tellraw @s {"rawtext":[{"text":"You have: "},{"score":{"name":"@s","objective":"SpongeCoins"}}]}`);
+        return player.runCommand(`tellraw @s {"rawtext":[{"text":"You have "},{"score":{"name":"@s","objective":"SpongeCoins"}}]}`);
 
-    return player.runCommand(`tellraw @s {"rawtext":[{"text":"You have: "},{"score":{"name":"@s","objective":"SpongeCoins"}}]}`);
+    return player.runCommand(`tellraw @s {"rawtext":[{"text":"You have "},{"score":{"name":"@s","objective":"SpongeCoins"}}]}`);
 }
